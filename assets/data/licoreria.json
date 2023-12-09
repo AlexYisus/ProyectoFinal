@@ -1,0 +1,39 @@
+{
+    "licores": [
+        {
+            "id": "antioq",
+            "name": "Antioqueño",
+            "description": "Aguardiente Antioqueño azul",
+            "precio": 19.20,
+            "image": "https://laguarda.com.ec/wp-content/uploads/2020/10/ANTIOQUENO-AZUL-370.png"
+        },
+        {
+            "id": "zhum",
+            "name": "Zhumir",
+            "description": "Zhumir Pink botella 750ml",
+            "precio": 8.88,
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI5YXJyDSC5dlUyvRytNsYlVoKwWFJLAltXHOFVzGt4g&s"
+        },
+        {
+            "id": "caña",
+            "name": "Caña Manabita",
+            "description": "Caña Manabita media",
+            "precio": 5.18,
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMWEahMSC2Vp0tJN9VSSyCWU203HRVOWoHVEf7e6jgPg&s"
+        },
+        {
+            "id": "cheine",
+            "name": "Heineken",
+            "description": "Six Pack Heineken 269ml",
+            "precio": 6.70,
+            "image": "https://thumbs.dreamstime.com/b/toma-de-la-botella-helada-cerveza-heineken-foto-en-fondo-blanco-179056532.jpg"
+        },
+        {
+            "id": "cclub",
+            "name": "Club",
+            "description": "Botella de cerveza club de 355ml",
+            "precio": 1.34,
+            "image": "https://ladolcefrutta.com/210/cerveza-club.jpg"
+        }
+    ]
+}
