@@ -5,13 +5,17 @@ import * as FileSystem from 'expo-file-system'
 
 export default function CarritoScreen({route}) {
 
-    const {licores}=route.params;
+    const {licores}=route.params || { licores: [] };
 
 
     const [numero1, setnumero1] = useState(0)
-
-    function aumentar() {
-        setnumero1(numero1 + 1)
+    
+    function precio(jsonData){
+        const data = JSON.parse(jsonData)
+        let precioTotal = 0.0;
+        data.licores.array.forEach(licor => {
+            precioTotal += licor.precio;
+        });
     }
 
     const datosLic = [
@@ -58,8 +62,8 @@ export default function CarritoScreen({route}) {
                     </View>
                 )}
             />
-            <Text>{numero1}</Text>
-            <Button title='Aumentar' onPress={() => aumentar()} />
+
+            <Button title="precio"/>
 
         </View>
     );
@@ -97,7 +101,7 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
 
-    txtCateg: {
+    txtCategr: {
         fontSize: 30
     }
 

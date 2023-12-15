@@ -7,7 +7,7 @@ import * as FileSystem from 'expo-file-system'
 export default function ProductosScreen({ navigation }) {
 
     const [licores, setlicores] = useState([])
-    const [cantidadMaxima, setCantidadMaxima] = useState(5);
+    const [cantidadMaxima, setCantidadMaxima] = useState(20);
 
     const datosLicores = licoreriaJSON;
     const secciones = [
@@ -29,7 +29,7 @@ export default function ProductosScreen({ navigation }) {
             setCantidadMaxima(cantidadMaxima - 1)
             guardar();
         } else {
-            Alert.alert("Mensaje", "No ce agregan mas productos")
+            Alert.alert("Mensaje", "No se agregan mas productos")
         }
     }
 
