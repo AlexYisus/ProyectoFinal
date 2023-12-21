@@ -10,12 +10,8 @@ export default function CarritoScreen({route}) {
 
     const [numero1, setnumero1] = useState(0)
     
-    function precio(jsonData){
-        const data = JSON.parse(jsonData)
-        let precioTotal = 0.0;
-        data.licores.array.forEach(licor => {
-            precioTotal += licor.precio;
-        });
+    function comprar(item) {
+            Alert.alert("COMPRA EXITOSA")
     }
 
     const datosLic = [
@@ -63,7 +59,7 @@ export default function CarritoScreen({route}) {
                 )}
             />
 
-            <Button title="precio"/>
+            <Button title="COMPRAR"onPress={() => comprar()}/>
 
         </View>
     );

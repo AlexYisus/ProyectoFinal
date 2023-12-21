@@ -3,6 +3,7 @@ import { View, Text, Alert, TextInput, TouchableOpacity, StyleSheet, Image, Imag
 import * as FileSystem from 'expo-file-system'
 
 
+
 export default function LoginScreen({ navigation }) {
 
     const [usuario, setuser] = useState('')
@@ -10,7 +11,7 @@ export default function LoginScreen({ navigation }) {
 
     const inicioSecion = async () => {
         try {
-            const file = `${FileSystem.documentDirectory}usuarios.json`;
+            const file = `${FileSystem.documentDirectory}./assets/usuarios.json`;
             const fileContents = await FileSystem.readAsStringAsync(file);
             const usuariosLis = JSON.parse(fileContents);
             const user = usuariosLis.find(user => user.username === usuario && user.password === pass);
@@ -57,12 +58,12 @@ export default function LoginScreen({ navigation }) {
             <TouchableOpacity style={styles.loginButton}>
                 <Text style={styles.loginButtonText}
                     onPress={() => inicioSecion()}
-                >Iniciar Sesión</Text>
+                >Registrarse</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.registroButton}>
                 <Text style={styles.loginButtonText}
                     onPress={() => navigation.navigate('HOMETAB')}
-                >Registrate</Text>
+                >Iniciar Sesión</Text>
             </TouchableOpacity>
         </ImageBackground>
     );
